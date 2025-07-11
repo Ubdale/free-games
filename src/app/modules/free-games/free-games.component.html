@@ -46,7 +46,7 @@
     <ng-template ngbPaginationPages let-page let-pages="pages">
       @if (pages.length > 0) {
         <li class="ngb-custom-pages-item">
-          <div class="mb-3 d-flex flex-nowrap px-2">
+          <div class="mb-3 d-flex flex-nowrap px-2 pagination">
             <label id="paginationInputLabel" for="paginationInput" class="col-form-label me-2 ms-1">Page</label>
             <input
               #i
@@ -60,7 +60,6 @@
               (blur)="selectPage(i.value)"
               (input)="formatInput($any($event).target)"
               aria-labelledby="paginationInputLabel paginationDescription"
-              style="width: 2.5rem"
             />
             <span id="paginationDescription" class="col-form-label text-nowrap px-2">
               of {{ pages.length }}
