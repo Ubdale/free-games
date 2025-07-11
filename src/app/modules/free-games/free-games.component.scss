@@ -1,0 +1,78 @@
+.card{
+    width: 18rem;
+}
+
+// Game card styles
+.game-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: #fff;
+  &:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 2;
+  }
+}
+
+.game-img {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background: #e9ecef;
+}
+
+.games-header {
+  background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 4px 24px rgba(44,83,100,0.12);
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-footer {
+  background: #f8f9fa;
+}
+
+.badge {
+  font-size: 0.85em;
+  padding: 0.4em 0.7em;
+  border-radius: 0.5em;
+}
+
+.row.g-4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.custom-pages-input {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f4f7fa;
+}
+
+// Responsive tweaks
+@media (max-width: 576px) {
+  .game-img {
+    height: 140px;
+  }
+  .games-header {
+    padding: 1.2rem 0 0.5rem 0;
+    font-size: 1.2rem;
+  }
+}
