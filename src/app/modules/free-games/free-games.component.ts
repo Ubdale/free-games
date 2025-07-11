@@ -18,15 +18,22 @@ export class FreeGamesComponent {
 items:any[]=[];
 paginatedItems: any[] = []; 
 
+isLoading = false;
+
 page = 1;
 itemsPerPage = 8;
  ngOnInit(): void {
+    this.isLoading = true;
     this.gamesService.getData().subscribe(
       (res) => {
       this.items = res;
       this.updatePaginatedItems(); 
+      this.isLoading = false;
     },
-      (err) => console.error(err)
+      (err) => {
+        console.error(err);
+        this.isLoading = false;
+      }
     );
   }
 updatePaginatedItems(): void {

@@ -66,6 +66,25 @@ body {
   background: #f4f7fa;
 }
 
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-spinner {
+  width: 4rem;
+  height: 4rem;
+  color: #0d6efd; // Bootstrap primary
+}
+
 // Responsive tweaks
 @media (max-width: 576px) {
   .game-img {
